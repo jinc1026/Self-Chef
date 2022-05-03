@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@0;1&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	font-family: 'Poppins', sans-serif;
+	background-image: url("assets/background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-title{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.sub-title {
+	text-align: center;
+}
+
+.input {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	height: 2em;
+}
+
+.card {
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+
+.card-image {
+	margin: 20px 20px 0px 20px;
+	border-radius: 10px;
+}
+
+.card-title {
+	text-align: center;
+}
+
+.btn-detail {
+	width: 100%;
+	margin-top: 5px;
+}
+
+.footer {
+	margin-top: auto;
+	font-size: 0.8em;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+#main-logo {
+	display: block;
+	margin: 0 auto;
+	width: 5em;
+	margin-bottom: 10px;
+	
+}
+
+#searchRecipes {
+	margin-top: 15px;
+}
+
+#recipe-finder{
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px;
+	margin: 30px auto;
+}
+
+
+@media (min-width: 320px){
+	#recipe-finder{
+		min-width: 400px;
+		width: 70%;
+	}
+	
+	#foundRecipes {
+		min-width: 400px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.card {
+		width: 100%;
+	}
+	
+	.card-text {
+		display: none;
+	}
+	
+}
+
+@media (min-width: 801px){
+	#recipe-finder{
+		width: 600px;
+	}
+	
+	#foundRecipes {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.card {
+		width: 600px;
+	}
+	
+	.card-text {
+		text-align: justify;
+		display: block;
+	}	
+}
