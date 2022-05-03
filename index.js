@@ -1,5 +1,5 @@
 const spoonacularAPIURL = "https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&";
-const spoonacularAPIKey = "&apiKey=3ffd0bb9ed17452a889672e59dfceff8";
+const spoonacularAPIKey = config.spoonacularAPIKey;
 
 const searchButton = document.getElementById("searchRecipes");
 const resultSection = document.getElementById("foundRecipes");
