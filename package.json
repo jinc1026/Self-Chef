@@ -1,0 +1,27 @@
+{
+  "name": "Self-Chef",
+  "version": "1.0.0",
+  "description": "Self-Chef helps users to find cooking recipes based on the ingredients that they currently have and missing or unwanted ingredients also can be added in the search term. This website is created to help people cook home meals and reduce hassle of finding creative recipes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinc1026/Self-Chef.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinc1026/Self-Chef/issues"
+  },
+  "homepage": "https://github.com/jinc1026/Self-Chef#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "path": "^0.12.7"
+  }
+}

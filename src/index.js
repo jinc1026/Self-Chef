@@ -30,9 +30,9 @@ const getRecipe = async function(include, exclude, cuisineType){
 											  "&number=5" + 
 											  "&cuisine=" + cuisineType + 
 											  spoonacularAPIKey);
-	const data = await response.json();
-	console.log(data);
-	return data;
+		postData({include: include, cuisine: cuisineType})
+		const data = await response.json();
+		return data;
 	} catch(error) {
 		console.log(`Error: ${error}`)
 	}
@@ -43,6 +43,23 @@ const updateUI = function(recipeList){
 	resultSection.innerHTML = "";
 	for(let i=0; i<recipeList.number; i++){
 		createCard(recipeList.results[i]);
+	}
+}
+
+const postData = async function(data){
+	const result = await fetch('/add',{
+		method: 'POST',
+		credentials: 'same-origin',
+		headers: {
+			 'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(data)
+	})
+	try{
+		const newResult = result.json();
+		return newResult;
+	} catch(err) {
+		console.log(err);
 	}
 }
 
