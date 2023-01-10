@@ -3,6 +3,7 @@ const projectData = {};
 
 // Set up express server
 const express = require('express');
+const serverless = require('serverless-http')
 const app = express();
 const path = require('path');
 
@@ -17,16 +18,16 @@ app.use(bodyParser.json());
 app.use(express.static('src'));
 
 // Start server
-const port = 9091;
+const port = process.env.PORT || 9000;
 app.listen(port, function(){
 	console.log("Server started... Port: " + port);
-})
+});
 
 app.get("/", (req,res)=>{
 	res.sendFile(path.resolve('src/index.html'));
-})
+});
 
 app.post("/add", (req,res)=>{
 	projectData.previousSearchTerms = req.body.include;
 	projectData.cuisine = req.body.cuisine;
-})
+});

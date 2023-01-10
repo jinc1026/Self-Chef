@@ -47,15 +47,16 @@ const updateUI = function(recipeList){
 }
 
 const postData = async function(data){
-	const result = await fetch('/add',{
-		method: 'POST',
-		credentials: 'same-origin',
-		headers: {
-			 'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(data)
-	})
 	try{
+		const result = await fetch('/add',{
+			method: 'POST',
+			credentials: 'same-origin',
+			headers: {
+				 'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(data),
+		})
+	
 		const newResult = result.json();
 		return newResult;
 	} catch(err) {
