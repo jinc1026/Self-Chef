@@ -7,6 +7,6 @@ How to Use:
 2. Type in ingredients that you'd like to exclude
 3. Selete a type of cuisine if needed
 
-Demo: https://jinc1026.github.io/Self-Chef/
+Demo: https://self-chef.onrender.com/
 
 Self-Chef is created by Jin Choe in May, 2022.
